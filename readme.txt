@@ -24,6 +24,16 @@ This plugin is a work in progress. You can report issues [here](http://wordpress
 5. Go to Settings > Sharing, and drag the Vk.com button to the sharing area.
 6. Enjoy! :)
 
+== FAQ ==
+
+= Can I use VK's Like button instead of the Share button? =
+
+The Like button requires an app ID and a Vk.com account. To use the Like button you would have to create your own app on Vk.com. I wanted this plugin to be simple to use, so I chose the Share button instead.
+
+= Why is this not in Jetpack yet? =
+
+If this Jetpack addon becomes popular, I will propose that we add Vk.com in Jetpack's Sharing module.
+
 == Changelog ==
 
 = 1.1 =
