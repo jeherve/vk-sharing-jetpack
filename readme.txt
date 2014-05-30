@@ -1,9 +1,9 @@
 === Vk.com sharing for Jetpack ===
 Contributors: jeherve
 Tags: WordPress.com, Jetpack, sharing, vk.com, vk 
-Requires at least: 3.3
-Tested up to: 3.7
-Stable tag: 1.0
+Requires at least: 3.8
+Tested up to: 3.9.1
+Stable tag: 1.1
 
 Add a Vk.com sharing button to the Jetpack Sharing module
 
@@ -13,7 +13,7 @@ Extends the Jetpack plugin and allows you to add a Vk.com sharing button to the 
 
 Important: for this plugin to work, you must activate [Jetpack](http://wordpress.org/plugins/jetpack/) first, and activate the Sharing module.
 
-This plugin is a work in progress. You can report issues [here](http://wordpress.org/extend/plugins/vk-sharing-jetpack/), or submit a pull request [on GitHub](https://github.com/jeherve/vk-sharing-jetpack/).
+This plugin is a work in progress. You can report issues [here](http://wordpress.org/plugins/vk-sharing-jetpack/), or submit a pull request [on GitHub](https://github.com/jeherve/vk-sharing-jetpack/).
 
 == Installation ==
 
@@ -25,6 +25,12 @@ This plugin is a work in progress. You can report issues [here](http://wordpress
 6. Enjoy! :)
 
 == Changelog ==
+
+= 1.1 =
+* Update the plugin to be compatible with Jetpack 3.0
+* Refactor the plugin organization to avoid all Fatal errors
+* Create new button options for Icon and Icon + Text button styles
+* Add a notice when Jetpack is deactivated
 
 = 1.0 =
 * Initial Release
