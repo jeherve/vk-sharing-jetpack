@@ -62,7 +62,6 @@ class Share_VKcom extends Share_Twitter {
 					{
 						type: "button"
 					}
-
 				)
 			);
 			--></script>';
