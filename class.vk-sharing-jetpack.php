@@ -53,12 +53,16 @@ class Share_VKcom extends Share_Twitter {
 			<script type="text/javascript"><!--
 			document.write(
 				VK.Share.button(
-					false,
 					{
-						type: "button",
 						url: "'. get_permalink( $post->ID ) .'",
-						text: ""
+						title: "'. get_the_title( $post->ID ) .'",
+						description: "'. get_the_excerpt( $post->ID ) .'",
+						noparse: true
+					},
+					{
+						type: "button"
 					}
+
 				)
 			);
 			--></script>';
