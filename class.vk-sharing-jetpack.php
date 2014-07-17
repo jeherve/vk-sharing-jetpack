@@ -47,6 +47,18 @@ class Share_VKcom extends Share_Twitter {
 		}
 	}
 
+	public function get_excerpt( $post ) {
+		global $post;
+
+		if ( empty( $post->post_excerpt ) ) {
+			$excerpt = $post->post_content;
+		} else {
+			$excerpt = $post->post_excerpt;
+		}
+
+		return wp_trim_words( wp_strip_all_tags( strip_shortcodes( $excerpt ) ), 30 );
+	}
+
 	public function get_display( $post ) {
 		if ( $this->smart ) {
 			return '
@@ -56,7 +68,7 @@ class Share_VKcom extends Share_Twitter {
 					{
 						url: "'. esc_js( get_permalink( $post->ID ) ) .'",
 						title: "'. esc_js( get_the_title( $post->ID ) ) .'",
-						description: "'. esc_js( get_the_excerpt( $post->ID ) ) .'",
+						description: "'. esc_js( $this->get_excerpt( $post->ID ) ) .'",
 						noparse: true
 					},
 					{
