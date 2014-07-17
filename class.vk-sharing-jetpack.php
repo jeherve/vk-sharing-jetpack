@@ -54,9 +54,9 @@ class Share_VKcom extends Share_Twitter {
 			document.write(
 				VK.Share.button(
 					{
-						url: "'. get_permalink( $post->ID ) .'",
-						title: "'. get_the_title( $post->ID ) .'",
-						description: "'. get_the_excerpt( $post->ID ) .'",
+						url: "'. esc_js( get_permalink( $post->ID ) ) .'",
+						title: "'. esc_js( get_the_title( $post->ID ) ) .'",
+						description: "'. esc_js( get_the_excerpt( $post->ID ) ) .'",
 						noparse: true
 					},
 					{
@@ -66,9 +66,9 @@ class Share_VKcom extends Share_Twitter {
 			);
 			--></script>';
 		} else if ( $this->icon ) {
-			return '<a target="_blank" rel="nofollow" class="share-vkcom sd-button share-icon" href="http://vk.com/share.php?url='. get_permalink( $post->ID ) .'"><span></span></a>';
+			return '<a target="_blank" rel="nofollow" class="share-vkcom sd-button share-icon" href="http://vk.com/share.php?url='. urlencode( get_permalink( $post->ID ) ) .'"><span></span></a>';
 		} else {
-			return '<a target="_blank" rel="nofollow" class="share-vkcom sd-button share-icon" href="http://vk.com/share.php?url='. get_permalink( $post->ID ) .'"><span>Vk.com</span></a>';
+			return '<a target="_blank" rel="nofollow" class="share-vkcom sd-button share-icon" href="http://vk.com/share.php?url='. urlencode( get_permalink( $post->ID ) ) .'"><span>Vk.com</span></a>';
 		}
 	}
 }
