@@ -56,16 +56,16 @@ class Share_VKcom extends Share_Twitter {
 					false,
 					{
 						type: "button",
-						url: "'. get_permalink( $post->ID ) .'",
+						url: "'. esc_js( get_permalink( $post->ID ) ) .'",
 						text: ""
 					}
 				)
 			);
 			--></script>';
 		} else if ( $this->icon ) {
-			return '<a target="_blank" rel="nofollow" class="share-vkcom sd-button share-icon" href="http://vk.com/share.php?url='. get_permalink( $post->ID ) .'"><span></span></a>';
+			return '<a target="_blank" rel="nofollow" class="share-vkcom sd-button share-icon" href="http://vk.com/share.php?url='. urlencode( get_permalink( $post->ID ) ) .'"><span></span></a>';
 		} else {
-			return '<a target="_blank" rel="nofollow" class="share-vkcom sd-button share-icon" href="http://vk.com/share.php?url='. get_permalink( $post->ID ) .'"><span>Vk.com</span></a>';
+			return '<a target="_blank" rel="nofollow" class="share-vkcom sd-button share-icon" href="http://vk.com/share.php?url='. urlencode( get_permalink( $post->ID ) ) .'"><span>Vk.com</span></a>';
 		}
 	}
 }
