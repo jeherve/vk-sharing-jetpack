@@ -47,17 +47,32 @@ class Share_VKcom extends Share_Twitter {
 		}
 	}
 
+	public function get_excerpt( $post ) {
+		global $post;
+
+		if ( empty( $post->post_excerpt ) ) {
+			$excerpt = $post->post_content;
+		} else {
+			$excerpt = $post->post_excerpt;
+		}
+
+		return wp_trim_words( wp_strip_all_tags( strip_shortcodes( $excerpt ) ), 30 );
+	}
+
 	public function get_display( $post ) {
 		if ( $this->smart ) {
 			return '
 			<script type="text/javascript"><!--
 			document.write(
 				VK.Share.button(
-					false,
 					{
-						type: "button",
 						url: "'. esc_js( get_permalink( $post->ID ) ) .'",
-						text: ""
+						title: "'. esc_js( get_the_title( $post->ID ) ) .'",
+						description: "'. esc_js( $this->get_excerpt( $post->ID ) ) .'",
+						noparse: true
+					},
+					{
+						type: "button"
 					}
 				)
 			);
