@@ -1,9 +1,9 @@
 === Vk.com sharing for Jetpack ===
 Contributors: jeherve
 Tags: WordPress.com, Jetpack, sharing, vk.com, vk 
-Requires at least: 3.8
-Tested up to: 3.9.1
-Stable tag: 1.2
+Requires at least: 4.1.1
+Tested up to: 4.2.2
+Stable tag: 1.2.1
 
 Add a Vk.com sharing button to the Jetpack Sharing module
 
@@ -35,6 +35,9 @@ The Like button requires an app ID and a Vk.com account. To use the Like button 
 If this Jetpack addon becomes popular, I will propose that we add Vk.com in Jetpack's Sharing module.
 
 == Changelog ==
+
+= 1.2.1 =
+* Fix layout issue with the Icon-only view, props @msveshnikov
 
 = 1.2 =
 * Refactor Official sharing button to respect [new guidelines](https://vk.com/pages?oid=-17680044&p=Sharing_External_Pages)
