@@ -40,7 +40,7 @@ class Share_VKcom extends Share_Twitter {
 		color: #fff !important;
 		width: 16px;
 		height: 16px;
-		top: 16px;
+		top: 12px;
 	}
 </style>
 <?php
