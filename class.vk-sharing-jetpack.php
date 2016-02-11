@@ -38,8 +38,7 @@ class Share_VKcom extends Share_Twitter {
 	.sd-social-icon .sd-content ul li[class*='share-'].share-vkcom a.sd-button {
 		background: #2B587A url('<?php echo plugins_url( 'vk-white.png', __FILE__ ); ?>') no-repeat;
 		color: #fff !important;
-		width: 32px;
-		height: 32px;
+		padding: 16px;
 		top: 12px;
 	}
 </style>
