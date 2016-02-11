@@ -4,7 +4,7 @@
  * Plugin URI: http://wordpress.org/plugins/vk-sharing-jetpack/
  * Description: Add a vk.com button to the Jetpack Sharing module
  * Author: Jeremy Herve
- * Version: 1.2.2
+ * Version: 1.2.3
  * Author URI: http://jeremy.hu
  * License: GPL2+
  * Text Domain: vkjp
